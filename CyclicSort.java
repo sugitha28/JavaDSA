@@ -17,11 +17,10 @@ public class CyclicSort {
     static int[] cyclic(int[] a){
         int i=0;
         while(i<a.length){
-            int b=a[i];
-            if(b!=a[b-1]){
+            int b=a[i]-1;
+            if(a[b]!=a[i]){
                 swap(a,i,b);
-            }
-            else{
+            }else{
                 i++;
             }
         }
@@ -29,8 +28,8 @@ public class CyclicSort {
     }
     static void swap(int[] a,int i,int b){
         int temp;
-        temp=a[i];
-        a[i]=a[b-1];
-        a[b-1]=temp;
+        temp=a[b];
+        a[b]=a[i];
+        a[i]=temp;
     }
 }
