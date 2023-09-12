@@ -13,7 +13,7 @@ public class CeilingArray {
         System.out.println("Enter the Target of the array");
         int target=sc.nextInt();
         int ans=binary(b,target);
-        System.out.println("THE CEILING OF THE ARRAY= "+ans);
+        System.out.println("THE CEILING OF THE TARGET= "+ans);
     }
     static int binary(int[] b,int a){
         int end=b.length-1;
